@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <% flash.each do |key,messagel| %>
+      <div class="text-center alert alert-<%= == 'notice'? 'success': 'danger' %>">
+        <%= message %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
